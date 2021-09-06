@@ -16,13 +16,11 @@ def my_reverse(input_list):
             my_reverse(i)
 
 
-if __name__ == "__main__":
-
-    deneme = [[1, 'a', ['cat'], 2], [[[3]], 'dog'], 4, 5]
-    flatten_list = flatten(deneme)
-    print(flatten_list)
 
 
-    deneme2 = [[1, 2], [3, 4], [[5, [6], 7], 8], 9]
-    my_reverse(deneme2)
-    print(deneme2)
+deneme = [[1, 'a', ['cat'], 2], [[[3]], 'dog'], 4, 5]
+flatten_list = flatten(deneme)
+print(flatten_list)
+deneme2 = [[1, 2], [3, 4], [[5, [6], 7], 8], 9]
+my_reverse(deneme2)
+print(deneme2)
