@@ -1,0 +1,24 @@
+--1.sorunun cevabi
+(
+SELECT first_name FROM customer
+)
+UNION ALL
+(
+SELECT first_name FROM actor
+);
+--2.sorunun cevabi
+(
+SELECT first_name FROM customer
+)
+INTERSECT
+(
+SELECT first_name FROM actor
+);
+--3.sorunun cevabi
+(
+SELECT first_name FROM customer
+)
+EXCEPT
+(
+SELECT first_name FROM actor
+);
