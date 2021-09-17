@@ -1,0 +1,12 @@
+--1.sorunun cevabi
+SELECT COUNT(*) FROM film
+WHERE length > (SELECT ROUND(AVG(length), 0) FROM film);
+--2.sorunun cevabi
+SELECT COUNT(*) FROM film 
+WHERE rental_rate = (SELECT MAX(rental_rate) FROM film);
+--3.sorunun cevabi
+SELECT COUNT(*) FROM film 
+WHERE rental_rate = (SELECT MIN(rental_rate) FROM film) AND replacement_cost = (SELECT MIN(replacement_cost) FROM film);
+--4.sorunun cevabi
+SELECT customer_id,first_name,last_name, (SELECT COUNT(*) FROM payment WHERE payment.customer_id = customer.customer_id) FROM customer
+ORDER BY(SELECT COUNT(*) FROM payment WHERE payment.customer_id = customer.customer_id) DESC;
